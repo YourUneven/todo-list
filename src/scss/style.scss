@@ -1,2 +1,8 @@
 @import 'normalize.css';
 @import 'colors.scss';
+
+.wrap{
+  height: 100%;
+  width: 100%;
+  background-color: $color-primary;
+}
