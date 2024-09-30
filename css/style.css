@@ -1,0 +1,17 @@
+@import 'normalize.css';
+.wrap {
+  height: 100%;
+}
+.wrap .search-form {
+  border: 1px solid tomato;
+}
+.wrap .search-form .search-form__text {
+  border: none;
+}
+.wrap .search-form .search-form__text #btn {
+  border: none;
+  text-decoration: none;
+}
+.wrap .search-form .search-form__text #btn .search-form__img {
+  border: none;
+}

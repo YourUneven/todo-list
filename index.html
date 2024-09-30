@@ -6,22 +6,33 @@
     <title>js</title>
   </head>
   <body>
+
+
+
+
     <div class="wrap">
      <header> <h1> TODO list</h1> </header>
-      <div class="input">
-        <input type="text" id="input">
-        
-      
-        <img src="/public/images/Add button.png" alt=""></div>
-      <div class="content">
-        <div class="one-content"><input type="checkbox" name="todo"> <a href="#">note 1</a><a href="#"><img src="/public/images/Vector.png" alt=""></a><a href="#"><img src="/public/images/trash-svgrepo-com 1.png" alt=""></a></div>
-        <div class="one-content"><input type="checkbox" name="todo"> <a href="#">note 1</a><a href="#"><img src="/public/images/Vector.png" alt=""></a><a href="#"><img src="/public/images/trash-svgrepo-com 1.png" alt=""></a></div>    
-       <div class="one-content"><input type="checkbox" name="todo"> <a href="#">note 1</a><a href="#"><img src="/public/images/Vector.png" alt=""></a><a href="#"><img src="/public/images/trash-svgrepo-com 1.png" alt=""></a></div>
-      </div>
-     
-      
 
-    
+      <div class="search-form form">
+        <input type="text" id="todoText" class="search-form__text" placeholder="Search  note..">
+        <div class="btn"><a href="#"><img class="search-form__img" src="/public/images/Vector (2).png" alt=""></a></div>
+        
+      </div>
+      <div class="search-form__filters">
+       <ul id="list-items" class="list-items"></ul>
+      </div>
+        
+
+
+
+<a href="#">
+     <img 
+     id="AddUpdateClick" 
+     src="/public/images/Add button.png"
+      alt="+" 
+      onclick="CreateTodoData()">
+    </a>
+</div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
