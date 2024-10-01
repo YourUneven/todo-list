@@ -6,7 +6,7 @@
   "homepage": "https://YourUneven.github.io/todo-list",
   "scripts": {
     "dev": "vite",
-    "build": "npm run your-build-script",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
