@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": 
+    "https://[YourUneven].github.io/[todo-list]",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -19,5 +22,7 @@
   "dependencies": {
     "normalize.css": "^8.0.1"
   }
+ 
+
 }
 
