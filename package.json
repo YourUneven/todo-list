@@ -3,16 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": 
-    "https://[YourUneven].github.io/[todo-list]",
-
+  "homepage": "https://YourUneven.github.io/todo-list",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "build": "npm run your-build-script",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
@@ -22,7 +19,4 @@
   "dependencies": {
     "normalize.css": "^8.0.1"
   }
- 
-
 }
-
