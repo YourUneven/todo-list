@@ -27,11 +27,10 @@
         
       </div>
       <div class="search-form__filters">
-       <ul
-        id="list-items"
-        class="list-items">
-        <li>
+       <ul id="lisning" class="lisning">
+        <li id="list-items" class="list-items">
           <div class="list-items__sub"><input type="checkbox">
+            <label for=""></label>
           <span>Note</span></div>
           
           <div class="img-search">
@@ -47,9 +46,9 @@
 
     
     
-<div class="new-todo__btn"><a href="#popup">
+<button class="new-todo__btn" id="newTodoItems"></button><a href="#popup" >
   <img src="/public/images/Add button.png" alt="+"></a>
-</div>
+</button>
 
 
 
@@ -84,12 +83,14 @@
         placeholder="Input your note... ">
         
         <div class="popup__conteiner-btn">
-        <div class="popup__btn bl">
-          <a class="popupApply" href="#">
+        <div class="popup__btn bl" 
+        id = 'popupApply'
+        onclick="addItems()">
+          <a href="#" >
             APPLY
           </a></div>
           <div class="popup__btn wit">
-          <a class="popupCancel" href="#">
+          <a class="popupCancel" href="">
             CANCEL
           </a></div></div>
         </div>
