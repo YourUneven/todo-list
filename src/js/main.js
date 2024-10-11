@@ -3,7 +3,7 @@ import '../scss/style.scss'
  const popupText = document.querySelector('#popupText'),
 popupButtonApply = document.querySelector('#popupApply'),
  listItems = document.getElementById('lisning'),
- buttonDefault = document.querySelector('.img-default');
+ buttonDefault = document.querySelector('.img-defauit');
 
 
 popupButtonApply.addEventListener('click', addItemsBlock);
@@ -33,7 +33,7 @@ function displayMessages() {
  displayMessage += `
 <li>
 <input type="checkbox"id='item_${i}' ${item.checked ? 'checked' : ''}>
-  <label for="item_${i}">${item.todo}</label>
+  <label for="item_${i}"class="${item.importlant ? 'importlant' : ''}">${item.todo}</label>
 
 
 <div class="img-search">
@@ -58,6 +58,22 @@ function displayMessages() {
     }
   });
 });
+
+
+
+//8) создаю функцию, которая будет отвечать за удаления таска
+function deletedTask(item) {
+  todoTasks[item].classList.add('deleted')
+  setTimeout(() => {
+    tasks.splice(index, 1);
+    storage();
+    showTasks();
+  }, 500)
+  setTimeout(() => {
+    alertify.success('Task deleted!')
+  }, 550)
+
+} //8) создаю функцию, которая будет отвечать за удаления таска
 
 
 
