@@ -61,19 +61,9 @@ function displayMessages() {
 
 
 
-//8) создаю функцию, которая будет отвечать за удаления таска
-function deletedTask(item) {
-  todoTasks[item].classList.add('deleted')
-  setTimeout(() => {
-    tasks.splice(index, 1);
-    storage();
-    showTasks();
-  }, 500)
-  setTimeout(() => {
-    alertify.success('Task deleted!')
-  }, 550)
-
-} //8) создаю функцию, которая будет отвечать за удаления таска
 
 
+buttonDefault.addEventListener('click', function() {
+  this.parentNode.remove();
+});
 
