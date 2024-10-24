@@ -2,8 +2,8 @@ import '../scss/style.scss'
 
  const popupText = document.querySelector('#popupText'),
 popupButtonApply = document.querySelector('#popupApply'),
- listItems = document.getElementById('lisning'),
- buttonDefault = document.querySelector('#buttonDef');
+ listItems = document.getElementById('lisning');
+ 
 
 
 popupButtonApply.addEventListener('click', addItemsBlock);
@@ -40,7 +40,7 @@ function displayMessages() {
   
   <div id = buttonRedly> 
 <img  src="/public/images/Vector (3).png" alt="#"></div>
-<div onclick = "deleteListItemByIndex(item)" id = buttonDef>
+<div id = buttonDef>
  <img " src="/public/images/trash-svgrepo-com 1.png" alt=""></div></div> 
 </li>`;
     listItems.innerHTML = displayMessage;
@@ -59,11 +59,12 @@ function displayMessages() {
     }
   });
 });
-
-
+var buttonDefault = document.querySelector('#buttonDef');
+buttonDefault.addEventListener('click', deleteListItemByIndex);
 function deleteListItemByIndex(item) {
   const attrIdValue = item.target.parentNode.getAttribute('id'); // получаем значение "items-1"
-  if (listItems) {
+
+    if (listItems) {
     const index = Number(attrIdValue.replace('items-','')); // из "items-" получаем "1"
     listItems = JSON.parse(listItems).splice(index, 1); // удаляем элемент в массиве по индексу
     localStorage.setItem(keyName, JSON.stringify(listItems)); // записываем новые данные в хранилище
@@ -72,5 +73,3 @@ const parentNode = item.target.parentNode;
 parentNode.removeChild(item.target);
 
 };
-
-
